@@ -1,0 +1,455 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/*===========================================================================================================================================================
+
+Hello! If this is your first time looking at a stylesheet within the text editor view, what you are reading right now is a "comment". Comments are added throughout this stylesheet with the purpose of making the source code easier to understand, comments will not be interpreted during the compile process. Since comments are not interpreted during the compile process, feel free to add or remove any comments.
+
+For help with MadCap Flare go to Help Ribbon > Topics Section > Open Help. Alternatively visit the Flare Online Help at help.madcapsoftware.com
+
+If you have any questions regarding how to work with this stylesheet or template project, please contact MadCap Technical Support. 
+https://www.madcapsoftware.com/support/contact-options.aspx
+
+NOTE: Generally, this stylesheet has elements listed out in the order that they appear in the topic from top to bottom. The exception are General styles which are at the top and the stylesheet mediums which are at the bottom.
+
+EXAMPLE: Since the Topic/Banner image is at the top of the home page, it will be listed closer to the top of this stylesheet. While, the footer will be written towards the bottom. 
+
+===========================================================================================================================================================*/
+
+/*==Home Page General Styles==*/
+
+body
+{
+	font-family: Arial;
+	line-height: 1.5em;
+	background-color: #fff;
+}
+
+h1
+{
+	font-size: 2.75em;
+	color: #fff;
+	line-height: 1em;
+}
+
+h2
+{
+	font-size: 1.6785em;
+	color: #fff;
+}
+
+p
+{
+	color: #5a5a5a;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+.center
+{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	float: none !important;
+	text-align: center;
+}
+
+.off-canvas-content .main-section > .outer-row
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+/*==Mad Cap proxy/editor assigned styles==*/
+
+MadCap|searchBarProxy
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	float: none;
+	width: 50%;
+}
+
+MadCap|topicToolbarProxy
+{
+	float: none;
+}
+
+MadCap|menuProxy.menu1
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|menuProxy.menu2
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+html.home-page
+{
+	mc-community-features: disabled;
+}
+
+/*==Responsive Header Styles==*/
+
+#contentBody > .responsive-header
+{
+	background-color: transparent;
+}
+
+/*==Home Page Hero Section==*/
+
+div.topic-hero	/*This is the first Hero/Banner on the Home Page - To replace the banner image with your own, change background-image property*/
+{
+	height: 5px;
+	background-color: #202c39;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center 0;
+}
+
+div.home-tiles	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Go to: Home Ribbon > Styles Section > Responsive Layout*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	margin-bottom: 1%;
+	max-width: 75em;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	background-color: transparent;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	/*Adds transition animation when switching between screen sizes*/
+	border: 3px solid #F7C5A4;
+	padding: 60px 10px;
+	height: 200px;
+}
+
+div.home-tiles > div > div
+{
+	position: relative;
+	height: 125px;
+}
+
+div.home-tiles > div > div::after
+{
+	content: '';
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 5px;
+	top: -35px;
+	left: -13px;
+}
+
+div.home-tiles > div > div::before
+{
+	content: '';
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 5px;
+	top: -35px;
+	right: -13px;
+}
+
+div.home-tiles > div:hover	/*When hovering over a home-tile, these properties apply*/
+{
+	box-shadow: 0 14px 8px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	overflow: hidden;
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 31.5%;
+	margin-left: 1.5%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 31.5%;
+	margin-left: 1.5%;
+}
+
+div.home-tiles > div:nth-child(3)
+{
+	width: 31.5%;
+	margin-left: 1.5%;
+}
+
+/*=Elements for text contained within each home-tile=*/
+
+p.tile-title
+{
+	text-align: center;
+	color: #7E8890;
+	font-size: 1.4em;
+}
+
+p.tile-content
+{
+	text-align: center;
+	color: #7E8890;
+	font-size: 0.8em;
+}
+
+p.tile-items
+{
+	color: #7E8890;
+	font-size: 0.7em;
+	text-align: center;
+}
+
+div.home-tiles a	/*Complex Selector: Any anchor (links) tags that are within div.home-tiles will have the following properties*/
+{
+	text-decoration: none;
+	color: #565656;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div.home-tiles a:hover	/*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+{
+	color: #626e77;
+}
+
+/*This is used as a fix for an issue in Chrome regarding the parallax effect and foundation*/
+
+.off-canvas-content,
+.off-canvas-wrapper
+{
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+}
+
+/*===========================================================================================================================================================
+Styles after this point are styles that are for specific mediums. If any additional styles are added to this template they will be listed after mediums.
+[@media tablet] declares styles that will apply when the screen is in tablet view
+[@media mobile] declares styles that will apply when the screen is in mobile view
+===========================================================================================================================================================*/
+
+@media only screen and (max-width: 1279px)
+{
+	#content-section .right-section,
+	#content-section .left-section
+	{
+		padding: 0;
+	}
+
+	p.info-title
+	{
+		font-size: 2em;
+	}
+
+	p.info-content
+	{
+		font-size: 1em;
+	}
+
+	div.footer
+	{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	div.home-master-page-footer > div:nth-child(1)
+	{
+		width: 25%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div:nth-child(2)
+	{
+		width: 50%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div:nth-child(3)
+	{
+		width: 25%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div
+	{
+		float: left;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		background-color: transparent;
+		transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+		/*Adds transition animation when switching between screen sizes*/
+		-moz-border-radius: 20x;
+		-webkit-border-radius: 20px;
+		border-radius: 20px;
+		border: 1px solid #d3d3d3;
+		padding: 60px 10px;
+	}
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 32%;
+		margin-left: 1%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 32%;
+		margin-left: 1%;
+	}
+
+	div.home-tiles > div:nth-child(3)
+	{
+		width: 32%;
+		margin-left: 1%;
+	}
+
+	div.info-section > div
+	{
+		text-align: center;
+	}
+
+	div.info-section > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-bottom: 10%;
+		margin-top: 5%;
+	}
+
+	div.info-section > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-bottom: 5%;
+	}
+
+	div.info-section > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	#content-section
+	{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	div.search-container
+	{
+		margin-bottom: 50px;
+	}
+
+	p.tile-title
+	{
+		font-size: 1.2em;
+	}
+
+	p.info-title
+	{
+		font-size: 2em;
+	}
+
+	p.info-content
+	{
+		font-size: 1em;
+	}
+
+	div.home-tiles > div
+	{
+		margin-top: 2%;
+	}
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	div.home-tiles > div:nth-child(3)
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	div.info-section > div
+	{
+		text-align: center;
+		padding: 0 20px;
+	}
+
+	div.info-section > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-bottom: 10%;
+		margin-top: 5%;
+	}
+
+	div.info-section > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-bottom: 5%;
+	}
+
+	div.info-section > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-master-page-footer > div	/* Adds separators to the footer items when in mobile layout */
+	{
+		border-bottom: 1px solid #d3d3d3;
+	}
+
+	div.home-master-page-footer > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.home-master-page-footer > div:nth-child(2)
+	{
+		width: 100%;
+	}
+
+	div.home-master-page-footer > div:nth-child(3)
+	{
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ObjectList>
+    <Object Value="General.CallToAction" />
+    <Object Value="General.StreetAddress" />
+    <Object Value="General.CityStateZip" />
+    <Object Value="General.PhoneNumber" />
+    <Object Value="General.Email" />
+    <Object Value="General.CompanyName" />
+</ObjectList>

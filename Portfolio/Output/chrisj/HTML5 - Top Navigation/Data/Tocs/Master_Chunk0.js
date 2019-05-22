@@ -1,0 +1,1 @@
+define({'___':{i:[0,1,2,3],t:['About','Resume','Samples','Contact'],b:['','','','']}});
