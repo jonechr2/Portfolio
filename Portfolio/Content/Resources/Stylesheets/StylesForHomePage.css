@@ -320,10 +320,7 @@ Styles after this point are styles that are for specific mediums. If any additio
 	box-sizing: border-box;
 	background-color: transparent;
 	transition: all 0.5s cubic-bezier(.25,.8,.25,1); /*Adds transition animation when switching between screen sizes*/
-	-moz-border-radius: 20x;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
-	border: 1px solid #d3d3d3;
+
 	padding: 60px 10px;
 	}
 
