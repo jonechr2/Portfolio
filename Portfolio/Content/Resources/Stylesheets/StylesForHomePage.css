@@ -1,4 +1,4 @@
-﻿/*<meta />*/
+/*<meta />*/
 
 /*===========================================================================================================================================================
 
@@ -36,9 +36,11 @@ h2
 	font-size: 1.6785em;
 	color: #202c39;
 }
-h3{
-font-size: 1.4em;
-color: #626e77;
+
+h3
+{
+	font-size: 1.4em;
+	color: #626e77;
 }
 
 p
@@ -48,11 +50,18 @@ p
 	margin-top: 8px;
 }
 
-.row{
-max-width: 75em;
-width: 80%;
-
+p.description
+{
+	font-style: italic;
+	font-size: .8em;
 }
+
+.row
+{
+	max-width: 75em;
+	width: 80%;
+}
+
 .center
 {
 	position: relative;
@@ -61,9 +70,11 @@ width: 80%;
 	float: none !important;
 	text-align: center;
 }
-.title-bar-container{
-height: 125px !important;
-border-bottom: solid 5px #626e77;
+
+.title-bar-container
+{
+	height: 125px !important;
+	border-bottom: solid 5px #626e77;
 }
 
 .off-canvas-content .main-section > .outer-row
@@ -116,20 +127,16 @@ html.home-page
 
 /*==Home Page Hero Section==*/
 
-div.topic-hero /*This is the first Hero/Banner on the Home Page - To replace the banner image with your own, change background-image property*/
+div.topic-hero	/*This is the first Hero/Banner on the Home Page - To replace the banner image with your own, change background-image property*/
 {
 	height: 5px;
-
 	background-color: #202c39;
-	
 	background-size: cover;
 	background-repeat: no-repeat;
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
 	background-position: center 0;
 }
-
-
 
 div.home-tiles	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Go to: Home Ribbon > Styles Section > Responsive Layout*/
 {
@@ -152,54 +159,81 @@ div.home-tiles::after
 	content: ' ';
 	display: table;
 	clear: both;
-	 
 }
-
-
 
 div.home-tiles > div
 {
 	float: left;
-
 	background-color: transparent;
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1); /*Adds transition animation when switching between screen sizes*/
-
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	/*Adds transition animation when switching between screen sizes*/
 	border: 3px solid #F7C5A4;
 	padding: 60px 10px;
-
 	height: 200px;
 }
-div.home-tiles > div >div{
-position: relative;
-height: 125px;
-}
-div.home-tiles > div >div::after{
-content: '';
-    position: absolute;
-    background: white;
-    height: 100%;
-    width: 5px;
-    top: -35px;
-    left: -13px;
-   
-    
-}
-div.home-tiles > div >div::before{
-content: '';
-    position: absolute;
-    background: white;
-    height: 100%;
-    width: 5px;
-    top: -35px;
-    right: -13px;
-   
-    
-}
 
-
-div.home-tiles > div:hover /*When hovering over a home-tile, these properties apply*/
+div.home-tiles > div > div
 {
-	box-shadow: 0 14px 8px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+	position: relative;
+	height: 125px;
+}
+
+div.home-tiles > div > div::after
+{
+	content: '';
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 5px;
+	top: -35px;
+	left: -13px;
+}
+
+div.home-tiles > div > div::before
+{
+	content: '';
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 5px;
+	top: -35px;
+	right: -13px;
+}
+
+div.section
+{
+	border: 3px solid #F2D492;
+	margin-bottom: 25px;
+	margin-top: 10px;
+	padding: 10px;
+	position: relative;
+}
+
+div.section::after
+{
+	content: '';
+	position: absolute;
+	background: white;
+	height: 50%;
+	width: 5px;
+	top: 25px;
+	left: -5px;
+}
+
+div.section::before
+{
+	content: '';
+	position: absolute;
+	background: white;
+	height: 50%;
+	width: 5px;
+	top: 25px;
+	right: -5px;
+}
+
+div.home-tiles > div:hover	/*When hovering over a home-tile, these properties apply*/
+{
+	box-shadow: 0 14px 8px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	overflow: hidden;
 }
 
@@ -208,7 +242,6 @@ div.home-tiles > div:nth-child(1)
 	width: 31.5%;
 	margin-left: 1.5%;
 }
-
 
 div.home-tiles > div:nth-child(2)
 {
@@ -245,36 +278,55 @@ p.tile-items
 	text-align: center;
 }
 
-div.home-tiles a /*Complex Selector: Any anchor (links) tags that are within div.home-tiles will have the following properties*/
+div.home-tiles a	/*Complex Selector: Any anchor (links) tags that are within div.home-tiles will have the following properties*/
 {
 	text-decoration: none;
 	color: #565656;
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-div.home-tiles a:hover /*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+a:visited
 {
 	color: #626e77;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+div.home-tiles a:hover	/*Complex Selector: When hovering over links within the home tiles the following properties will apply.*/
+{
+	color: #626e77;
+}
 
 /*This is used as a fix for an issue in Chrome regarding the parallax effect and foundation*/
-.off-canvas-content, .off-canvas-wrapper{
-  -webkit-backface-visibility: visible;
-          backface-visibility: visible;
+
+.off-canvas-content,
+.off-canvas-wrapper
+{
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+}
+
+MadCap|dropDown
+{
+	font-size: 24px;
+	color: #48525d;
+	margin-bottom: 20px;
+	mc-closed-image: url('../Images/Assets/Icons/Arrows/arrow-right-gray.png');
+	mc-open-image: url('../Images/Assets/Icons/Arrows/arrow-down-gray.png');
+}
+
+MadCap|dropDownHead
+{
+	color: #48525d;
+}
+
+MadCap|dropDownHotspot
+{
+	color: #48525d;
+}
+
+a
+{
+	text-decoration: none;
+	color: #626e77;
 }
 
 /*===========================================================================================================================================================
@@ -324,16 +376,16 @@ Styles after this point are styles that are for specific mediums. If any additio
 		width: 25%;
 		margin-left: 0%;
 	}
-	
+
 	div.home-tiles > div
 	{
-	float: left;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	background-color: transparent;
-	transition: all 0.5s cubic-bezier(.25,.8,.25,1); /*Adds transition animation when switching between screen sizes*/
-
-	padding: 60px 10px;
+		float: left;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		background-color: transparent;
+		transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+		/*Adds transition animation when switching between screen sizes*/
+		padding: 60px 10px;
 	}
 
 	div.home-tiles > div:nth-child(1)
@@ -409,7 +461,7 @@ Styles after this point are styles that are for specific mediums. If any additio
 		font-size: 1em;
 	}
 
-		div.home-tiles > div
+	div.home-tiles > div
 	{
 		margin-top: 2%;
 	}
@@ -458,12 +510,12 @@ Styles after this point are styles that are for specific mediums. If any additio
 		width: 100%;
 		margin-left: 0%;
 	}
-	
-	div.home-master-page-footer > div /* Adds separators to the footer items when in mobile layout */
+
+	div.home-master-page-footer > div	/* Adds separators to the footer items when in mobile layout */
 	{
 		border-bottom: 1px solid #d3d3d3;
 	}
-	
+
 	div.home-master-page-footer > div:nth-child(1)
 	{
 		width: 100%;
@@ -478,6 +530,5 @@ Styles after this point are styles that are for specific mediums. If any additio
 	{
 		width: 100%;
 	}
-
-
 }
+

@@ -1,4 +1,4 @@
-﻿/*<meta />*/
+/*<meta />*/
 
 /*===========================================================================================================================================================
 
@@ -94,12 +94,12 @@ a.MCBreadcrumbsLink
 	text-decoration: underline;
 }
 
-a.MCBreadcrumbsLink:visited 
+a.MCBreadcrumbsLink:visited
 {
 	color: #7469b9;
 }
 
-a.MCBreadcrumbsLink:hover 
+a.MCBreadcrumbsLink:hover
 {
 	color: #000000;
 }
@@ -135,10 +135,12 @@ MadCap|dropDownBody
 	border-bottom: 1px solid #d3d3d3;
 }
 
-MadCap|dropDown /*Change the "mc-open-image" and "mc-closed-image" properties to change the icons used in drop-downs*/
+MadCap|dropDown	/*Change the "mc-open-image" and "mc-closed-image" properties to change the icons used in drop-downs*/
 {
 	mc-open-image: url('../Images/Assets/Icons/Arrows/arrow-down-gray.png');
 	mc-closed-image: url('../Images/Assets/Icons/Arrows/arrow-right-gray.png');
+	color: #f2d492;
+	font-size: 1.5em;
 }
 
 /*==Master Page Topic Layout==*/
@@ -148,10 +150,11 @@ nav.title-bar	/*Adds bottom border on top navigation bar*/
 	border-bottom: 1px solid #d3d3d3;
 }
 
-div.top-bar /*Contains the breadcrumbs and toolbar*/
+div.top-bar	/*Contains the breadcrumbs and toolbar*/
 {
 	border-bottom: 1px solid #d3d3d3;
-	min-height: 50px; 	/*Min-height is necessary for topics that are not included in a TOC*/
+	min-height: 50px;
+	/*Min-height is necessary for topics that are not included in a TOC*/
 }
 
 div.search-container
@@ -161,24 +164,24 @@ div.search-container
 
 /*==Elements for the left side of Master Page layout==*/
 
-div.side-menu /*This is the div that the menu proxy is contained in*/
+div.side-menu	/*This is the div that the menu proxy is contained in*/
 {
 	padding-left: 10px;
 	margin-top: 15px;
 }
 
-div.side-content /*This is the div for the side-content containing "Search Tips" and the "Contact Support" button*/
+div.side-content	/*This is the div for the side-content containing "Search Tips" and the "Contact Support" button*/
 {
 	padding-top: 10px;
 }
 
-MadCap|dropDownHead.side-content /*Font properties for the "Search Tips" drop-down head */
+MadCap|dropDownHead.side-content	/*Font properties for the "Search Tips" drop-down head */
 {
 	font-size: 1.1em;
 	font-weight: bold;
 }
 
-div.cta /*Call to action button/Contact Support button*/
+div.cta	/*Call to action button/Contact Support button*/
 {
 	-moz-border-radius: 60px;
 	-webkit-border-radius: 60px;
@@ -191,7 +194,7 @@ div.cta /*Call to action button/Contact Support button*/
 	margin-top: 20px;
 }
 
-div.cta:hover /*When hovering over the CTA button the following properties will apply*/
+div.cta:hover	/*When hovering over the CTA button the following properties will apply*/
 {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 	transform: scale(1.01);
@@ -254,6 +257,7 @@ Styles after this point are styles that are for specific mediums. If any additio
 [@media tablet] declares styles that will apply when the screen is in tablet view
 [@media mobile] declares styles that will apply when the screen is in mobile view
 ===========================================================================================================================================================*/
+
 @media tablet
 {
 	div.topic-layout > div:nth-child(1)
@@ -286,3 +290,4 @@ Styles after this point are styles that are for specific mediums. If any additio
 		margin-left: 2%;
 	}
 }
+

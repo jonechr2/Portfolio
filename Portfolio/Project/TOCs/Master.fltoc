@@ -8,7 +8,8 @@
   <TocEntry
     Title="Resume"></TocEntry>
   <TocEntry
-    Title="Samples"></TocEntry>
+    Title="Samples"
+    Link="/Content/Samples/Sample-Landing.htm"></TocEntry>
   <TocEntry
     Title="Contact"
     Link="/Content/Contact.htm"></TocEntry>
