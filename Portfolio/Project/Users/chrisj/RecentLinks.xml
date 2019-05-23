@@ -4,6 +4,9 @@
         <Link Value="C:\Users\chrisj\Documents\My Projects\Portfolio\Portfolio\Content\Resources\Images\Assets\Icons\Arrows\arrow-down-gray.png" />
     </Dialog>
     <Dialog Name="B3.XmlTextKit.InsertHyperlinkDialog">
-        <Link Value="C:\Users\chrisj\Documents\My Projects\Portfolio\Portfolio\Content\Samples\Sample-Landing.htm" />
+        <Link Value="C:\Users\chrisj\Documents\My Projects\Portfolio\Portfolio\Content\Projects\Projects-Landing.htm" />
+    </Dialog>
+    <Dialog Name="B3.XmlTextKit.MultimediaGeneralDialogPage">
+        <Link Value="C:\Users\chrisj\Documents\My Projects\Portfolio\Portfolio\Content\Samples\Video\Q Mobile.mp4" />
     </Dialog>
 </RecentLinks>

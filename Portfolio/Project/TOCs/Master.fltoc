@@ -6,7 +6,8 @@
     StartSection="false"
     Link="/Content/About/About-Me.htm"></TocEntry>
   <TocEntry
-    Title="Resume"></TocEntry>
+    Title="Resume"
+    Link="/Content/Chris_Jones_ Resume__2019.pdf" />
   <TocEntry
     Title="Samples"
     Link="/Content/Samples/Sample-Landing.htm"></TocEntry>

@@ -1,4 +1,4 @@
-/*<meta />*/
+﻿/*<meta />*/
 
 /*===========================================================================================================================================================
 
@@ -34,7 +34,7 @@ h1
 h2
 {
 	font-size: 1.6785em;
-	color: #202c39;
+	color: #48525D;
 }
 
 h3
@@ -48,6 +48,7 @@ p
 	color: #5a5a5a;
 	margin-bottom: 8px;
 	margin-top: 8px;
+	font-size: 16px;
 }
 
 p.description
@@ -325,8 +326,8 @@ MadCap|dropDownHotspot
 
 a
 {
-	text-decoration: none;
 	color: #626e77;
+	text-decoration: underline;
 }
 
 /*===========================================================================================================================================================
@@ -532,3 +533,17 @@ Styles after this point are styles that are for specific mediums. If any additio
 	}
 }
 
+img.thumbnail
+{
+	mc-thumbnail: popup;
+	border: solid 2px #c0c0c0;
+	animation: border-pulsate 2s infinite;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+@keyframes border-pulsate {
+    0%   { border-color: rgba(192, 192, 192, 1); }
+    50% { border-color: rgba(192, 192, 192, 0); }
+    100%   { border-color: rgba(192, 192, 192, 1); }
+}

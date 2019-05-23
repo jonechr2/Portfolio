@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UrlList>
+    <Url Source="Resources/Images/ALTC-search-page.png" />
+    <Url Source="Resources/Images/ALTC-home-page.png" />
+    <Url Source="Resources/Images/Learning-Center-Home.png" />
     <Url Source="Resources/Images/Assets/Icons/Arrows/arrow-down-gray.png" />
     <Url Source="Resources/Images/Assets/Icons/Arrows/arrow-right-gray.png" />
     <Url Source="Samples/SOP.pdf#1" />
