@@ -16,7 +16,8 @@
   MasterStylesheet="/Content/Resources/Stylesheets/StylesForHomePage.css"
   MasterStylesheetOverride="true"
   DisableAutoSync="true"
-  OutputFile="index.html">
+  OutputFile="index.html"
+  FaviconSkin="/Project/Skins/Favicon.flskn">
   <PrintedOutput
     CollapseMargins="true"
     GenerateTOCProxy="true"
