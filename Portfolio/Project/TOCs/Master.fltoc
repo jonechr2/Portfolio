@@ -3,11 +3,13 @@
   Version="1">
   <TocEntry
     Title="About"
-    StartSection="false"></TocEntry>
+    StartSection="false"
+    Link="/Content/About/About-Me.htm"></TocEntry>
   <TocEntry
     Title="Resume"></TocEntry>
   <TocEntry
     Title="Samples"></TocEntry>
   <TocEntry
-    Title="Contact"></TocEntry>
+    Title="Contact"
+    Link="/Content/Contact.htm"></TocEntry>
 </CatapultToc>

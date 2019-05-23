@@ -27,14 +27,18 @@ body
 h1
 {
 	font-size: 2.75em;
-	color: #fff;
+	color: #F7c5A4;
 	line-height: 1em;
 }
 
 h2
 {
 	font-size: 1.6785em;
-	color: #fff;
+	color: #202c39;
+}
+h3{
+font-size: 1.4em;
+color: #626e77;
 }
 
 p
@@ -44,7 +48,11 @@ p
 	margin-top: 8px;
 }
 
+.row{
+max-width: 75em;
+width: 80%;
 
+}
 .center
 {
 	position: relative;
@@ -52,6 +60,10 @@ p
 	margin-left: auto;
 	float: none !important;
 	text-align: center;
+}
+.title-bar-container{
+height: 125px !important;
+border-bottom: solid 5px #626e77;
 }
 
 .off-canvas-content .main-section > .outer-row

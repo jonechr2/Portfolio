@@ -3,4 +3,7 @@
     <Dialog Name="B3.XmlMdiEditorKit.ImageGeneralDialogPage">
         <Link Value="C:\Users\chrisj\AppData\Local\Temp\MadCap Software\Flare\SkinEditor\_3D17928F\logo.png" />
     </Dialog>
+    <Dialog Name="B3.XmlTextKit.InsertHyperlinkDialog">
+        <Link Value="C:\Users\chrisj\Documents\My Projects\Portfolio\Portfolio\Content\Accomplishments\Accomplishments.htm" />
+    </Dialog>
 </RecentLinks>
