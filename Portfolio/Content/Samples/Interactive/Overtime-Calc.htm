@@ -1,8 +1,188 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head>
-    </head>
     <body>
-        <h1>Overtime Calculator</h1><iframe id="iframe" src="http://help.teamsoftware.com/Documentation/WinTeam/Payroll/References/Premium-Pay-Calculator.htm" width="100%" height="1000px;" scrolling="no"></iframe>
+        <h1>
+            <MadCap:concept term="Help Articles" />Premium Pay Calculator</h1>
+        <p>Use this calculator to test the premium pay rate based on hours type defaults for any hours over 40 in a pay week. System calculated overtime will assume an OT method of time and one half for hours over 40 in a pay week (OT Method 1).</p>
+        <div class="overtimeCalc">
+            <form id="myform">
+                <div class="align">
+                    <select class="boxClass" id="overtimeRule" name="overtimeRule">
+                        <option selected="true" disabled="true"> Select an overtime rule</option>
+                        <option class="option" value="system"> Subject to System Calculated Overtime</option>
+                        <option class="option" value="always">Treat as Overtime Always </option>
+                        <option class="option" value="doubleAlways">Double Overtime Always </option>
+                        <option class="option" value="exempt">Exempt </option>
+                    </select>
+                    <div class="info">
+                        <div class="tooltip" id="systemInfo"><i class="fa fa-info-circle" aria-hidden="true"></i> <span class="tooltiptext">When this option is selected, WinTeam uses the overtime method set up in the Employee Master File (Pay Information tab) for each employee.</span></div>
+                        <div class="tooltip" id="alwaysInfo"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="tooltiptext">When this option is selected, WinTeam automatically pays time and one half for this Hours Type.</span>
+                        </div>
+                        <div class="tooltip" id="doubleInfo"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="tooltiptext">When this option is selected, WinTeam automatically pays double time for this Hours Type.</span>
+                        </div>
+                        <div class="tooltip" id="exemptInfo"><i class="fa fa-info-circle" aria-hidden="true"></i><span class="tooltiptext">When this options is selected, WinTeam does not pay overtime for this Hours Type (Example: Vacation, Holiday, Sick Pay, etc.).</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="align" style="margin-top:30px;">
+                    <input class="boxClass" id="rate" type="number" step="any" placeholder="Pay Rate">
+                    </input>
+                </div>
+                <div class="align">
+                    <input class="boxClass" id="percent" type="number" placeholder="Extra Pay Rule">
+                    </input>
+                    <div class="checkboxClass">
+                        <input id="premium" type="checkbox"> 
+							Use 100% for premium pay calculation
+						</input>
+                    </div>
+                    <div class="checkboxClass">
+                        <input id="exclude" type="checkbox">
+							Exclude OT Premium if these hours caused the OT
+						</input>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <button class="buttonClass" type="button" id="submit">Calculate</button>
+        <div class="total">
+        </div>
+        <p>
+            <script type="text/javascript">/*<![CDATA[*/ //set Extra Pay Rule and check boxes to be gray
+				
+				$("#premium").prop("disabled", true);
+				$("#exclude").prop("disabled", true);
+				//Hide info fields
+				$(".tooltip").hide();
+				//Capture the selection in the dropdown into a variable to use later
+				$("#overtimeRule").change(function(){
+				var overtime = $("#overtimeRule").val();
+				var extra = $("#percent").val();
+				if (overtime === "system" && extra >= 150){
+				
+				$("#exclude").prop("disabled", false);
+				}
+				else {
+				$("#exclude").prop("checked", false);
+				$("#exclude").prop("disabled", true);
+				}
+				
+    
+				console.log(overtime);
+				console.log(extra);
+				});
+				
+				//If the extra pay rule is more than 100, enable the check boxes. 
+				$("#percent").change(function(){
+				var extra = $("#percent").val();
+				var overtime = $("#overtimeRule").val();
+				if(extra >= 100){
+				$("#premium").prop("disabled", false);
+				}
+				if (extra >= 150 && overtime === "system"){
+				$("#exclude").prop("disabled", false);
+				} 
+				else{
+				$("#exclude").prop("checked", false);
+				$("#exclude").prop("disabled", true);
+    
+				}
+  
+  
+  
+  
+				});
+			
+				//Hide and show the appropriate info tooltip
+				$("#overtimeRule").change(function(){
+				var rule = $("#overtimeRule").val();
+				if (rule === "system"){
+				$(".tooltip").hide();
+				$("#systemInfo").show();
+    
+				}
+				else if (rule === "always") {
+				$(".tooltip").hide();
+				$("#alwaysInfo").show();
+				}
+				else if (rule === "doubleAlways") {
+				$(".tooltip").hide();
+				$("#doubleInfo").show();
+				}
+				else if (rule === "exempt") {
+				$(".tooltip").hide();
+				$("#exemptInfo").show();
+				}
+				else{
+				$(".tooltip").hide()
+				}
+				});
+				
+			
+
+				var rateModifier = 1.0;
+
+				//When Calculate is clicked, check which dropdown is selected, and run the applicable calculation to get the overtime rate. 
+				$("#submit").click(function(){
+				var overtime = $("#overtimeRule").val();
+				switch(overtime) {      
+				case "system":
+				rateModifier = 1.5;
+				break;
+				case "always":
+				rateModifier = 1.5;
+				break;
+				case "doubleAlways":
+				rateModifier = 2.0;
+				break;
+				case "exempt":
+				rateModifier = 1.0;
+				break;
+				}
+ 
+				var premium=$("#premium").prop("checked");
+				var exclude=$("#exclude").prop("checked");
+				var rate = $("#rate").val();
+				var newRate= rate * rateModifier;
+ 
+				var decimalMod = $("#percent").val();
+				var dec = parseFloat(decimalMod) / 100.0;
+				var newerRate = newRate * dec;
+				// If the dropdown is NOT Subject to System Calculated Overtime, then do a standard calculation, otherwise, take additional steps. 
+				if(decimalMod <100){
+				alert("Please enter an Extra Pay Rule amount between 100 and 500.")
+				}
+  
+				else if (premium === true){
+				console.log(newRate);
+				$(".total").html("The hourly rate is " + Math.round(100*newRate)/100);
+				}
+				else if (exclude === true){
+				console.log(newRate);
+				$(".total").html("The hourly rate is " + Math.round(100*newRate)/100);
+				}
+				else{
+				console.log(newerRate);
+				$(".total").html("The hourly rate is " + Math.round(100*newerRate)/100);
+				}
+  
+  
+				});
+
+  
+
+                 
+
+
+
+
+
+    
+ 
+
+
+    
+			/*]]>*/</script>
+        </p>
     </body>
 </html>

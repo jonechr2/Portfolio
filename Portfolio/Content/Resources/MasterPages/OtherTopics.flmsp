@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="404" MadCap:lastWidth="1065">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head>
         <meta charset="utf-8" />
         <meta name="description" content="" />
         <meta name="author" content="" /><title></title>
+		<link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        
         <div class="row collapse">
-           
-                    <MadCap:bodyProxy />
-                
+            <MadCap:bodyProxy />
         </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script src="../button.js">
+        </script>
     </body>
 </html>
