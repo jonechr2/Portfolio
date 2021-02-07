@@ -83,7 +83,25 @@ p.description
 	max-width: 100%;
 	padding: 0;
 }
-
+/*.grid-container{
+display:grid;
+grid-template-columns: 3fr auto;
+grid-template-rows:auto auto 100px;
+grid-template-areas: 
+"left right"
+"middle middle"
+"bottom bottom";
+}
+.myImage{
+grid-area: left;
+}
+.intro{
+grid-area: right;
+}
+.myPhilosophy{
+grid-area: middle;
+}
+*/
 /*==Mad Cap proxy/editor assigned styles==*/
 
 MadCap|searchBarProxy

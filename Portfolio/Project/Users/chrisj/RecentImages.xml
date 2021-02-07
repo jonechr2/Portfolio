@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UrlList>
+    <Url Source="Resources/Images/Concourse.gif" />
+    <Url Source="Resources/Images/evolve.png" />
+    <Url Source="Resources/Images/PS-Curriculum.jpg" />
     <Url Source="Resources/Images/Onboarding.png" />
     <Url Source="Resources/Images/toggle.png" />
     <Url Source="Resources/Images/ALTC-search-page.png" />
